@@ -1,26 +1,28 @@
+import 'bootstrap/dist/css/bootstrap.min.css'
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { sampleText } from './sampleText'
 
-export default App;
+function App() {
+  state = {
+    text: sampleText
+  }
+  return (
+    <div className="container">
+      <div className="row">
+        <div className="col-sm-6">
+          <textarea value={ this.state.text } className="form-control" rows="35"></textarea>
+        </div>
+        <div className="col-sm-6">
+          <div>
+            { sampleText }
+          </div>
+        </div>
+      </div>
+    </div>
+    );
+  }
+  
+  export default App;
+  
